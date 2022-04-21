@@ -1,0 +1,15 @@
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\TesteAlfaSoft.exe
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\TesteAlfaSoft.deps.json
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\TesteAlfaSoft.runtimeconfig.json
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\TesteAlfaSoft.dll
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\ref\TesteAlfaSoft.dll
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\bin\Debug\net6.0\TesteAlfaSoft.pdb
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.csproj.AssemblyReference.cache
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.AssemblyInfoInputs.cache
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.AssemblyInfo.cs
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.csproj.CoreCompileInputs.cache
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.dll
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\ref\TesteAlfaSoft.dll
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.pdb
+C:\Users\ebalo\OneDrive\Documentos\Programas\TesteAlfaSoft\obj\Debug\net6.0\TesteAlfaSoft.genruntimeconfig.cache
