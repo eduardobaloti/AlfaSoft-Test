@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-
 class FileApp{
 	public static void Main(string[] args)
 	{
@@ -14,28 +13,28 @@ class FileApp{
             string s = "";
             while ((s = sr.ReadLine()) != null)
             {
+                users.Append(s);
                 Console.WriteLine(s);
-                
-                
             }
         };
 
         //Third Step -> Api retrieve
-
         HttpClient client = new HttpClient();
         async Task GetUser()
         {
-
             for (var i = 0; i < users.Count; i++){
-                string response = client.GetAsync("https://api.bitbucket.org/2.0/users/{user}", user);
+                string user = users[i];
+                string url = ("https://api.bitbucket.org/2.0/users/"+user);
+                string response = ("url.com");
                 await Task.Delay(500);
                 Console.WriteLine(response);
-
-                using (StreamWriter writer = new StreamWriter("/logfile.txt"))  
+                //Whrite in LogFile
+                using (StreamWriter writer = new StreamWriter("/logfile.txt"))   
                 {  
                    writer.WriteLine(response);  
                 } 
             }
+            await Task.FromResult("Ok");
         }
         GetUser();
         Thread.Sleep(500);
