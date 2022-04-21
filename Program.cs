@@ -1,7 +1,13 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 class FileApp{
-	public static void Main(string[] args)
+	static async Task Main(string[] args)
 	{
+        //Timer check
+        string timestamp = File.ReadAllText("timelock.txt");
+        DateTime lastRun = DateTime.Parse(timestamp);
+        if (DateTime.Now > lastRun.AddMinutes(1))
+        {
         //First Step - > receive a parameter
         Console.Write("Input the file location: ");
         string path = Console.ReadLine();
@@ -20,24 +26,31 @@ class FileApp{
 
         //Third Step -> Api retrieve
         HttpClient client = new HttpClient();
-        async Task GetUser()
+        for (var i = 0; i <= users.Count-1; i++)
         {
-            for (var i = 0; i < users.Count; i++){
-                string user = users[i];
-                string url = ("https://api.bitbucket.org/2.0/users/"+user);
-                //string response = client.GetAsync(url);
-                Thread.Sleep(500);
-                Console.WriteLine("After time"); //DEBUG
+            string user = users[i];
+            string url = ("https://api.bitbucket.org/2.0/workspaces/"+user);
+            try
+            {
+                string response = await client.GetStringAsync(url);
+                Console.WriteLine(url);
                 Console.WriteLine(response);
+                await Task.Delay(5000);
                 //Whrite in LogFile
-                using (StreamWriter writer = new StreamWriter("/logfile.txt"))   
+                using (StreamWriter writer = new StreamWriter("logfile.txt", true))   
                 {  
-                   writer.WriteLine(response);  
-                } 
+                    writer.WriteLine(response.Trim());
+                }
             }
-            await Task.FromResult("Ok");
+            catch { }
         }
-        GetUser();
-        Thread.Sleep(500);
+        File.WriteAllText("timelock.txt", DateTime.Now.ToString());
+        Thread.Sleep(5000);
+        }
+        else
+        {
+            Console.WriteLine("wait one minute to use again");
+        }
 	}
 };
+
