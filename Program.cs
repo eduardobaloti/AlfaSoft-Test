@@ -3,7 +3,7 @@ class FileApp{
 	public static void Main(string[] args)
 	{
         //First Step - > receive a parameter
-        Console.WriteLine("Input the file location:");
+        Console.Write("Input the file location: ");
         string path = Console.ReadLine();
 
         //Second Step -> file processing
@@ -13,7 +13,7 @@ class FileApp{
             string s = "";
             while ((s = sr.ReadLine()) != null)
             {
-                users.Append(s);
+                users.Add(s);
                 Console.WriteLine(s);
             }
         };
@@ -25,8 +25,9 @@ class FileApp{
             for (var i = 0; i < users.Count; i++){
                 string user = users[i];
                 string url = ("https://api.bitbucket.org/2.0/users/"+user);
-                string response = ("url.com");
-                await Task.Delay(500);
+                //string response = client.GetAsync(url);
+                Thread.Sleep(500);
+                Console.WriteLine("After time"); //DEBUG
                 Console.WriteLine(response);
                 //Whrite in LogFile
                 using (StreamWriter writer = new StreamWriter("/logfile.txt"))   
